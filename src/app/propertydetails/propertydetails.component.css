@@ -1,0 +1,14 @@
+.extra-imgs{
+    gap: 12px;
+}
+
+.pdimg {
+   
+    transition: transform 1s ease; /* Smooth transition for scaling */
+    border-radius: 4px;
+}
+
+.pdimg:hover {
+    transform: scale(1.1); /* Scale the image up on hover */
+    opacity: .9;
+}  

@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table table-bordered table-dark table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td>SNo</td>
+                        <td>Type</td>
+                        <td>Price</td>
+                        <td>Location</td>
+                        <td>name</td>
+                        <td>image</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of mypro">
+                        <td>{{p.id}}</td>
+                        <td>{{p.title}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.location}}</td>
+                        <td>{{p.name}}</td>
+                        <td><img [src]="p.image" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

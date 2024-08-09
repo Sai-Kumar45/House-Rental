@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-6 form-section">
+                    <h1>Upload your property in 3 simple steps</h1>
+                    <ul>
+                        <li>Add Basic Details</li>
+                        <li>Add Property Details</li>
+                        <li>Add Photos</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 form-section">
+                    <form [formGroup]="propertyform" (ngSubmit)="addData()">
+                        <h1>Add Property to Listings</h1>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter ID"
+                                formControlName="id">
+                        </div>
+                        <select class="form-select form-group" formControlName="propertytype" name="name">
+                            <option value="" disabled selected>Select property type</option>
+                            <option value="House">House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="PG">PG</option>
+                        </select>
+                        <br>
+                        <div class="form-group">
+                            <select id="location" formControlName="location" class="form-select form-group" name="name">
+                                <option value="" disabled selected>Select a location</option>
+                                <option value="Miyapur,Hyderabad">Miyapur, Hyderabad</option>
+                                <option value="Kukatpally,Hyderabad">Kukatpally, Hyderabad</option>
+                                <option value="Gachibowli,Hyderabad">Gachibowli, Hyderabad</option>
+                                <option value="Madhapur,Hyderabad">Madhapur, Hyderabad</option>
+                                <option value="Kondapur,Hyderabad">Kondapur, Hyderabad</option>
+                                <option value="HitechCity,Hyderabad">Hitech City, Hyderabad</option>
+                                <option value="JubileeHills,Hyderabad">Jubilee Hills, Hyderabad</option>
+                                <option value="BanjarHills,Hyderabad">Banjar Hills, Hyderabad</option>
+                                <option value="Begumpet,Hyderabad">Begumpet, Hyderabad</option>
+                                <option value="Ameerpet,Hyderabad">Ameerpet, Hyderabad</option>
+                                <option value="Mehdipatnam,Hyderabad">Mehdipatnam, Hyderabad</option>
+                                <option value="Manikonda,Hyderabad">Manikonda, Hyderabad</option>
+                            </select>
+                        </div><br>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="title"
+                                formControlName="title" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter property facing"
+                                formControlName="facing" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Add description"
+                                formControlName="description" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Name"
+                                formControlName="name" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter Phone Number"
+                                formControlName="phoneNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter property Area"
+                                formControlName="area" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter Price"
+                                formControlName="price" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="name" type="text" placeholder="Enter Image URL"
+                                formControlName="image" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Add Property</button>
+                    </form>
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

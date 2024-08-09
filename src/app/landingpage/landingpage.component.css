@@ -1,0 +1,162 @@
+.section-heading {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.property-card img {
+    width: 800px;
+    height: 400px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.feedback-card, .service-card, .property-card {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.couplehome {
+    position: relative;
+    overflow: hidden; /* Ensure the overflow is hidden to prevent the scaled image from exceeding its container */
+    border-radius: 24px;
+}
+
+.couplehome img {
+    width: 100%;
+    height: 400px;
+    transition: transform 1s ease; /* Smooth transition for scaling */
+    border-radius: 24px;
+}
+
+.couplehome img:hover {
+    transform: scale(1.1); /* Scale the image up on hover */
+    opacity: .9;
+} 
+
+.searchbar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to left, rgba(46,109,130,.8), rgb(255, 255, 255));
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    gap: 1rem;
+    outline: none;
+}
+.searchbar input select{
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 16px;
+    border-radius: 4px;
+}
+label{
+    font-weight: 500;
+    font-size: larger;
+
+}
+button{
+    border: none;
+   
+    padding: 4px;
+    border-radius: 12px;
+}
+
+/* Carousel CSS */
+.carousel-container {
+    position: relative;
+    width: 600px; /* Adjust to the width of your images */
+    height: 400px; /* Adjust to the height of your images */
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-slide {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: slideAnimation 9s infinite;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: imageAnimation 9s infinite;
+    border-radius: 24px;
+}
+
+.carousel-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel-image:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.carousel-image:nth-child(3) {
+    animation-delay: 6s;
+}
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.block {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}

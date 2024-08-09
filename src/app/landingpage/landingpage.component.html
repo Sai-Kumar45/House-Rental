@@ -1,0 +1,328 @@
+<!-- <div class="container-fluid mt-5 view">
+    <div class="d-flex justify-content-center searchbar">
+        <div>
+            <label for="select">Location</label>
+            <select name=" " id="">
+                <option value="">Hyderabad</option>
+                <option value="">Bangalore</option>
+                <option value="">chennai</option>
+            </select>
+        </div>
+        <div>
+            <label for="select">Property Type</label>
+            <select name=" " id="">
+                <option value="">Independent House</option>
+                <option value="">Appartmen</option>
+                <option value="">PG</option>
+            </select>
+        </div>
+        <button type="submit">search</button>
+    </div>
+    <div class="couplehome">
+        <img src="homecouple.webp" alt="">
+    </div>
+    <div class="section-heading">Houses</div>
+    <div class="row mb-5">
+        <div class="col-md-5">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+        <div class="col-md-7">
+            
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="homeimg1.o.jpg" alt="House Image" class="carousel-image">
+                    <img src="homeimg1.3.jpg" alt="house " class="carousel-image">
+                    <img src="homeimg1.1.jpg" alt="house" class="carousel-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-heading">Apartments</div>
+    <div class="row mb-5">
+        <div class="col-md-7 block">
+            
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="landingpageimg.webp" alt="House Image" class="carousel-image">
+                    <img src="appartinterior.webp" alt="house " class="carousel-image">
+                    <img src="apart1.1.jpg" alt="house" class="carousel-image">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+    </div>
+
+    <div class="section-heading">PGs</div>
+    <div class="row mb-5">
+        <div class="col-md-5 block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+        <div class="col-md-7 block">
+            <img src="https://via.placeholder.com/600x400" alt="PG Image" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="section-heading">Our Services</div>
+    <div class="row mb-5 block">
+        <div class="col-md-6 service-card">
+            <h5>Interior Design</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+        <div class="col-md-6 service-card block">
+            <h5>Transport for Shifting</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+    </div>
+
+    <div class="section-heading">Trending Properties</div>
+    <div id="trendingPropertiesCarousel" class="carousel slide mb-5 block" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="House">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="Apartment">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="PG">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev block" href="#trendingPropertiesCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next block" href="#trendingPropertiesCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="section-heading">Customer Feedback</div>
+    <div class="row mb-5 block">
+        <div class="col-md-4 feedback-card block">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 1</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 feedback-card block">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 2</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 feedback-card v">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 3</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Property Rental. All Rights Reserved.
+    </div>
+</div> -->
+<div class="container-fluid mt-5 view">
+    <div class="couplehome">
+        <img src="landingpageimg.webp" alt="">
+        <form [formGroup]="searchForm" (ngSubmit)="res()">
+            <div class="d-flex justify-content-center flex-row searchbar">
+                <div>
+                    <label for="location">Location</label>
+                    <select id="location" formControlName="location">
+                        <option value="" disabled selected>Select a location</option>
+                        <option value="Miyapur,Hyderabad">Miyapur, Hyderabad</option>
+                        <option value="Kukatpally,Hyderabad">Kukatpally, Hyderabad</option>
+                        <option value="Gachibowli,Hyderabad">Gachibowli, Hyderabad</option>
+                        <option value="Madhapur,Hyderabad">Madhapur, Hyderabad</option>
+                        <option value="Kondapur,Hyderabad">Kondapur, Hyderabad</option>
+                        <option value="HitechCity,Hyderabad">Hitech City, Hyderabad</option>
+                        <option value="JubileeHills,Hyderabad">Jubilee Hills, Hyderabad</option>
+                        <option value="BanjarHills,Hyderabad">Banjar Hills, Hyderabad</option>
+                        <option value="Begumpet,Hyderabad">Begumpet, Hyderabad</option>
+                        <option value="Ameerpet,Hyderabad">Ameerpet, Hyderabad</option>
+                        <option value="Mehdipatnam,Hyderabad">Mehdipatnam, Hyderabad</option>
+                        <option value="Manikonda,Hyderabad">Manikonda, Hyderabad</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="property-type">Property Type</label>
+                    <input list="propertyTypes" id="property-type" formControlName="propertyType"
+                        placeholder="Select property type">
+                    <datalist id="propertyTypes">
+                        <option value="House"></option>
+                        <option value="Apartment"></option>
+                        <option value="PG"></option>
+                    </datalist>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+    <h1></h1>
+    <div class="section-heading">Houses</div>
+    <div class="row mb-5">
+        <div class="col-md-5 block bg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Praesent ac magna justo.Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Praesent ac magna justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Praesent ac magna justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna
+                justo.</p>
+        </div>
+        <div class="col-md-7 block">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="homeimg1.o.jpg" alt="House Image" class="carousel-image">
+                    <img src="homeimg1.3.jpg" alt="house " class="carousel-image">
+                    <img src="homeimg1.1.jpg" alt="house" class="carousel-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading">Apartments</div>
+    <div class="row mb-5">
+        <div class="col-md-7 block">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="appartment.webp" alt="House Image" class="carousel-image">
+                    <img src="appartinterior.webp" alt="house " class="carousel-image">
+                    <img src="apart1.1.jpg" alt="house" class="carousel-image">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 block bg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo."Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+                nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
+                varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                ultricies nisi. Nam eget dui."</p>
+        </div>
+    </div>
+
+    <div class="section-heading">PGs</div>
+    <div class="row mb-5">
+        <div class="col-md-5 block">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+        <div class="col-md-7 block">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="landingpageimg.webp" alt="House Image" class="carousel-image">
+                    <img src="appartinterior.webp" alt="house " class="carousel-image">
+                    <img src="apart1.1.jpg" alt="house" class="carousel-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-heading">Our Services</div>
+    <div class="row mb-5 block">
+        <div class="col-md-6 service-card">
+            <h5>Interior Design</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+        <div class="col-md-6 service-card block">
+            <h5>Transport for Shifting</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac magna justo.</p>
+        </div>
+    </div>
+
+    <div class="section-heading">Trending Properties</div>
+    <div id="trendingPropertiesCarousel" class="carousel slide mb-5 block" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row tp">
+                    <div class="col-md-4 property-card block">
+                        <img src="house9.webp" alt="House">
+                    </div>
+                    <div class="col-md-4 property-card block">
+                        <img src="house7.jpg" alt="PG">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="House 2">
+                    </div>
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="Apartment 2">
+                    </div>
+                    <div class="col-md-4 property-card block">
+                        <img src="https://via.placeholder.com/300x200" alt="PG 2">
+                    </div>
+                </div>
+            </div>
+            <!-- Additional carousel items can be added here -->
+        </div>
+        <a class="carousel-control-prev block col-md-12" href="#trendingPropertiesCarousel" role="button"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next block col-md-12" href="#trendingPropertiesCarousel" role="button"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <div class="section-heading">Customer Feedback</div>
+    <div class="row mb-5 block">
+        <div class="col-md-4 feedback-card ">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 1</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 feedback-card ">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 2</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 feedback-card v">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <footer class="blockquote-footer">Customer 3</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Rentavio. All Rights Reserved.
+    </div>
+</div>

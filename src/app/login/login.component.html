@@ -1,0 +1,88 @@
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+<div class="container-fluid">
+    <div class="row formdata">
+        <div class="col-md-3 bgc" *ngIf="flag1">
+            <form [formGroup]="signupform" (ngSubmit)="signup()" class="formsignup frmsp">
+                <div class=" d-flex justify-content-center">
+
+                    <h4 style="color: white;">Register</h4>
+                </div>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">First Name</mat-label>
+                    <input style="color: white;" class="text-white" matInput type="text" formControlName="firstName"
+                        placeholder="Enter your first name">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Last Name</mat-label>
+                    <input style="color: white;" class="text-white" matInput type="text" formControlName="lastName"
+                        placeholder="Enter your last name">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Password</mat-label>
+                    <input style="color: white;" class="text-white" matInput type="password" formControlName="password"
+                        placeholder="Enter password">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Confirm Password</mat-label>
+                    <input style="color: white;" class="text-white" matInput type="password"
+                        formControlName="confirmpassword" placeholder="Confirm password">
+                    <mat-hint *ngIf="!checkpassowrd()" style="color: red;">confirm password should same as
+                        password</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Email</mat-label>
+                    <input style="color: white;" class="text-white" matInput type="email" formControlName="email"
+                        placeholder="Enter email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Phone</mat-label>
+                    <input style="color: white;" class="text-white" type="text" matInput formControlName="phoneNumber"
+                        placeholder="Enter phone number">
+                </mat-form-field>
+                <div class="d-flex justify-content-center">
+
+                    <button mat-flat-button type="submit" class="btn-primary">Sign
+                        Up</button>
+                </div>
+            </form>
+
+            <hr style="width: 100px;">
+
+
+            <button type="submit" class="nav-link" (click)="toggleform()" style="color: blue;"><span
+                    style="color: white;">Already have an
+                    account? </span> Login</button>
+
+        </div>
+        <div class="col-md-3 bgc col" *ngIf="flag2">
+            <form [formGroup]="loginform" (ngSubmit)="login()">
+                <p style="color: white;" *ngIf="userflag">Your username is: <span
+                        style="color: blue;">{{usersuccess}}</span></p>
+                <h4 style="color: white;">Login</h4>
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">username</mat-label>
+                    <input matInput style="color: white;" type="text" formControlName="username"
+                        placeholder="Enter your username">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label style="color: white;">Password</mat-label>
+                    <input matInput style="color: white;" type="password" formControlName="password"
+                        placeholder="Enter password">
+
+                </mat-form-field>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <button type="submit" class="btn btn-primary" (click)="toggleform()">Open Signup</button>
+        </div>
+    </div>
+
+</div>
+<!-- </div> -->

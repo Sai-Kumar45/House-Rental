@@ -1,0 +1,71 @@
+<div class="parent container d-flex mt-3">
+    <div class="col-md-6">
+        <img [src]="property.image" alt="" height="400" width="600"><br><br>
+        <div class="container ">
+            <!-- Image Grid -->
+            <h6 style="text-decoration:underline; font-weight: 500;">Detailings</h6>
+            <div class="d-flex extra-imgs" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <img [src]="property.image" class="pdimg" alt="image" title="click" height="100" width="100">
+                <img [src]="property.image" class="pdimg" alt="image" title="click" height="100" width="100">
+                <img [src]="property.image" class="pdimg" alt="image" title="click" height="100" width="100">
+                <img [src]="property.image" class="pdimg" alt="image" title="click" height="100" width="100">
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade " id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg ">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h5 class="modal-title " style="color: white;" id="imageModalLabel">Detailings</h5>
+                            <button type="button " class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="carouselExampleControls" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img [src]="property.image" alt="" height="400" width="800">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img [src]="property.image" alt="" height="400" width="800">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img [src]="property.image" alt="" height="400" width="800">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img [src]="property.image" alt="" height="400" width="800">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6 ">
+        <h4>{{property.description}}</h4>
+        <h4>{{property.price | currency:'INR'}}&nbsp;| {{property.area}} </h4>
+        <h4>{{property.title}}</h4>
+        <!-- <h4>{{property.area}}</h4> -->
+        <h4>{{property.location}}</h4>
+        <h4>{{property.facing}}</h4>
+        <h4>contact Owner:
+            <label for="">name: {{property.name}}</label>
+            <label for="" style="font-size: larger;">Phone Number:{{property.phoneNumber}}</label>
+        </h4>
+
+    </div>
+
+</div>

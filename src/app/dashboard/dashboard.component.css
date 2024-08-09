@@ -1,0 +1,187 @@
+/* Styling for fixed top navbar */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the navbar stays above all content */
+    background-color: rgba(0, 0, 0, 0.9); /* Background color with transparency */
+    height: 75px; /* Set the height of the navbar */
+  }
+  
+  /* Sidebar styling */
+  .left-sidebar {
+    position: fixed;
+    top: 75px; /* Align with the height of the navbar */
+    bottom: 0;
+    width: 250px; /* Adjust the width as needed */
+    overflow-y: auto; /* Scrollbar for sidebar content */
+    background-color: rgba(0, 0, 0, 0.9); /* Sidebar background */
+    transition: transform 0.3s ease; /* Smooth transition for toggle */
+    transform: translateX(0); /* Default position */
+    padding: 40px 0px;
+  }
+  
+  .sidebar-hidden {
+    transform: translateX(-100%); /* Hide sidebar */
+  }
+  .logo{
+    position: relative;
+    left: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .left-sidebar {
+      width: 100%; /* Full width on mobile */
+      top: 60px; /* Align with the height of the navbar */
+    }
+  
+    .body-content {
+      margin-left: 0; /* No sidebar margin on mobile */
+      margin-top: 3rem;
+    }
+  
+    .navbar-toggler {
+      display: block; /* Show toggle button on mobile */
+    }
+  
+    .navbar-collapse {
+      justify-content: flex-start;
+    }
+  
+    .btn-primary.position-relative.me-3 {
+      display: none; /* Hide Add Property button on mobile */
+    }
+  }
+  
+  /* Main content adjustment */
+  .body-content {
+    margin-left: 250px; /* Space for the sidebar */
+    padding-top: 75px; /* Offset to ensure content starts below the navbar */
+    transition: margin-left 0.3s ease; /* Smooth transition for toggle */
+  }
+  
+  .content-expanded {
+    margin-left: 0; /* Full width content when sidebar is hidden */
+  }
+  
+  /* Make top and side navbars black */
+   /* .app-header nav.navbar,
+   .left-sidebar {
+   
+    margin-left: -12px;
+    margin-right: -12px;
+  }  */
+  
+  .app-header {
+    position: fixed;
+    z-index: 2;
+  }
+  .g{
+    gap: 1rem;
+  }
+  .bg{
+    border: 1px solid white;
+    background-color: #fff;
+  
+  }
+  .bg1{
+    border: 1px solid white;
+    background-color: #fff;
+   color: rgb(13,110,253);
+   font-weight: 400;
+   border: none;
+   outline: none;
+   transition: background-color 0.5s ease-in-out;
+  }
+  .bg1:hover{
+    background-color: rgb(13,110,253);
+    color: white;
+    border: none;
+    outline: none;
+  }
+ 
+  
+  /* Remove underline from links and dots from list items */
+  .sidebar-nav ul#sidebarnav a {
+    text-decoration: none;
+    padding: 20px 0;
+  }
+  
+  .sidebar-nav ul#sidebarnav li {
+    list-style: none;
+    z-index: 10;
+  }
+  
+  /* Highlight text on hover in side navbar */
+  .sidebar-nav ul#sidebarnav a:hover {
+    color: #fff;
+    background-color: #333;
+  }
+  
+  /* Custom styles for the sidebar nav items */
+  .sidebar-nav .sidebar-item .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #b8c3d9;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .sidebar-nav .sidebar-item .sidebar-link:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+
+  /* contact by whatsapp*/
+  .whatsapp {
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 8px;
+    position: relative;
+    width: 7em;
+    height: 2.3em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+  
+  .whatsapp p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: rgb(13,110,253);
+  }
+  
+  .whatsapp svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+  }
+  
+  .whatsapp:hover p {
+    left: .3em;
+    color: #fff
+  }
+  
+  .whatsapp:hover svg {
+    opacity: 1;
+  }
+  
+  .whatsapp:hover {
+    background-color: #25D366;
+  }
+  
